@@ -8,8 +8,7 @@ export default function Projects ({ data }) {
   //console.log(data.allMarkdownRemark.nodes)
   const projects = data.projects.nodes
 
-  const contact = data.contact.siteMetadata.contact;
-
+  const contact = data.contact.siteMetadata.contact
 
   return (
     <Layout>
@@ -19,9 +18,11 @@ export default function Projects ({ data }) {
         <div className={styles.projects}>
           {
             projects.map(project =>
-                           <Link key={project.id} to={"/project/" +
+                           <Link key={project.id} to={"/projects/" +
                            project.frontmatter.slug}>
-                             <GatsbyImage alt={project.frontmatter.title} image={getImage(project.frontmatter.thumb)} />
+                             <GatsbyImage alt={project.frontmatter.title}
+                                          image={getImage(
+                                            project.frontmatter.thumb)} />
                              <h3>{project.frontmatter.title}</h3>
                              <p>{project.frontmatter.stack}</p>
                            </Link>

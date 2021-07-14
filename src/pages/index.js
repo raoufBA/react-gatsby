@@ -5,10 +5,9 @@ import Link from "gatsby-link"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-export default function Home ({data}) {
-  const image = data
-  console.log(image)
-   return (
+export default function Home ({ data }) {
+
+  return (
     <Layout>
       <section className={styles.header}>
         <div>
@@ -18,14 +17,12 @@ export default function Home ({data}) {
           <Link className={styles.btn} to="/projects">My Protfolio
             Projects</Link>
         </div>
-        <GatsbyImage image={getImage(data.image)} alt="dfd"  />
-        {/*<img src="banner.png" alt="site banner" style={{ maxWidth: "100%" }} />*/}
+        <GatsbyImage image={getImage(data.image)} alt="dfd" />
       </section>
     </Layout>
-
   )
 }
-//
+
 export const query = graphql`
 query Banner {
   image: file {
@@ -33,7 +30,6 @@ query Banner {
       gatsbyImageData(
         placeholder: BLURRED
         transformOptions: {cropFocus: CENTER}
-        #aspectRatio: 0.7
        )
     }
   }

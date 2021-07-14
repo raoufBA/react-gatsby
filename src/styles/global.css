@@ -5,7 +5,7 @@
     padding: 0;
     text-decoration: none;
     font-family: "Montserrat";
-    color: white;
+    color: #4c4c4c;;
 }
 
 html, body {
@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-    background: radial-gradient(at top left, rgba(101, 110, 225, 1) 0%, rgba(43, 9, 107, 1) 100%);
+  /*  background: radial-gradient(at top left, rgba(101, 110, 225, 1) 0%, rgba(43, 9, 107, 1) 100%);*/
     background-repeat: no-repeat;
 }
 
@@ -55,4 +55,5 @@ footer p {
     text-align: center;
     color: #bbb;
     margin: 40px auto;
+    height: 200px;
 }
